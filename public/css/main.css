@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+
+}
+
+body {
+	font-family: Hannotate SC;
+    background-color: silver;
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+header {
+    width: 100%;
+    height: 320px;
+    background: url("/img/IMG_5176.JPG");
+    background-color: rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+    font-family: Hannotate SC;
+	background-position: center;
+    background-size: cover;
+    position: relative;
+    text-shadow: 0 0 10px yellow;
+}
+header h1 {
+    margin: 0 20px;
+    color: black;
+    font-size: 100px;
+    
+    
+}
+header a {
+    margin-left: 50px;
+    bottom: 10px;
+    right: 20px;
+    color: whitesmoke;
+    font-size: 30px;
+}
+.log {
+    margin-right: 12px;
+    text-align: right;
+}
+
+
+footer {
+    width: 100%;
+    max-width: 1000px;
+    height: 100px;
+    background-color: grey;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+footer a {
+    margin-top: 30px;
+    color: white;
+    text-shadow: 0 0 10px yellow;
+    font-family: Hannotate SC;
+}
+.top {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+.top img {
+   width: 70%; 
+   margin: 20px auto;
+   padding-bottom: 20px;
+}
+.top a {
+    padding: 40px;
+    font-size: 20px;    
+}
+.top h2 {
+    font-size: 30px;
+    margin: 10px 5px;
+}
+.menu {
+    border-radius: 5px;
+    background-color: grey;
+    padding: 10px;
+    color: white;
+    
+}
+.item {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.multi {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.multi h2 {
+    font-size: 35px;
+    margin: 20px auto;
+    text-align: center;
+}
+.multi li {
+    font-size: 25px;
+    padding: 0 10px;
+    margin: 10px;    
+}
+.multi li {
+    text-align: left;
+}
+.multi_sub {
+    background-color: rgb(163, 156, 230);
+}
+
+
+.trade_sub1{
+    background-color: rgb(163, 156, 230);
+}
+.trade_sub2{
+    background-color:rgb(246, 145, 127);
+}
+
+.login {
+    width: 500px;
+    margin: 0 auto;
+}
+.login h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.login h2 {
+    font-size: 20px;
+    margin: 200px auto;
+    text-align: center;
+}
+input {
+    width: 500px;
+    font-size: 20px;
+    font-family: Hannotate SC;
+    margin: 15px auto;
+    text-align: center;
+}
+.inputbox {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+.inputbox p {
+    margin: 20px;
+    font-size: 18px;
+}
+.inputbox ul li p {
+    margin: 0 40px 0 0;
+}
+.inputbox ul input {
+    width: 10px;
+    margin: 0 20px;
+    transform: scale(1.6);
+}
+.inputbox ul li {
+    display: flex;
+}
+.error {
+	margin: 0;
+	color: red;
+    font-size: 14px;
+	
+}
+.new {
+    display: flex;
+    justify-content: space-around;   
+}
+
+
+#body {
+    height: 70px;
+}
+
+
+.member {
+    display: flex;
+    margin: 20px auto;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.icon img {
+    width: 150px;
+    height: 150px;
+}
+.profile {
+    margin: 20px;
+}
+.profile p {
+    font-size: 25px;
+    margin-right: 50px;
+}
+.evaluate {
+    display: flex;
+}
+.recuruit {
+    display: flex;
+    justify-content: space-between;
+}
+.recuruit a {
+    padding: 10px;
+}
+.recuruit h3 {
+    font-size: 25px;
+}
+.item {
+    margin-bottom: 30px;
+}
+
+
+.user {
+    display: flex;
+}
+.user p {
+    margin-left: 20px;
+}
+tr {
+    font-size: 25px;
+}
+th {
+    padding: 20px;
+}
+
+.messagebox ul li {
+    margin: 10px;
+}
+.messagebox ul li a {
+    font-size: 15px;
+    padding: 0;
+}
+.messagebox ul li p {
+    font-size: 20px;
+}
+
+.flash_message {
+	font-size: 20px;
+    text-align: center;
+}
+
+.multi .subtitle {
+    font-size: 18px;
+}
+
+ul li a {
+    margin-right: 20px;
+}
+
+i {
+    color: rgb(235, 23, 58);
+    font-size: 20px;
+}
+button {
+    font-size: 20px;
+}
+
+.nugood {
+    color: #c30;
+}
