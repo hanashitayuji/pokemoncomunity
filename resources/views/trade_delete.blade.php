@@ -6,13 +6,13 @@
 @include('cssjs')
 </head>
 <body>
-
+@include('header')
     <div class="login">
         <h2>消去が完了しました。</h2>
         
     </div>
     <div class="new">
-        <a href='{{ @$_SERVER["HTTP_REFERER"] }}'>投稿一覧に戻る</a>
+        <a href="{{ url('/trade_list') }}">投稿一覧に戻る</a>
     </div>
-
+    @include('footer')
 </body>

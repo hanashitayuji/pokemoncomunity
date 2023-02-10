@@ -6,10 +6,9 @@
 @include('cssjs')
 </head>
 <body>
-
     @include('header')
-    <div class="login">
-        <h2>投稿が完了しました。</h2>
+    <div class="complete">
+        <p>投稿が完了しました。</p>
         
     </div>
     <div class="new">

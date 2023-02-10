@@ -15,11 +15,8 @@
         </div>
         @foreach ($items as $item)
         <div class="profile">
-            
-            <p>ユーザー名:　{{ @$item->name }}</p>
-            <p>一言コメント</p>
-            <p>{{ @$item->body }}</p>
             <div class="evaluate">
+                <p>ユーザー名:　{{ @$item->name }}</p>
                 @if(Auth::check())
                     
                     @if($good == 0)
@@ -35,6 +32,11 @@
                 <p>いいね数: {{ $count }}</p>
                 @endif
             </div>
+            
+
+            <p>一言コメント</p>
+            <p>{{ @$item->body }}</p>
+            
         </div>
     </div>
     <div class="top">

@@ -22,6 +22,7 @@ class UserController extends Controller {
         $count = DB::table('good')->where('user_id','=',"$id")
             ->count();
         $good = DB::table('good')->where('valuer_id','=',"$myid")
+            ->where('user_id','=',"$id")
             ->count();
         if($myid == $id) {
             return view('master')->with('count',"$count");

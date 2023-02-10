@@ -1,3 +1,7 @@
+function alert() {
+    alert('この投稿は消去されました')
+}
+
 function OnLinkClick() {
     var result = confirm('消去しますか？');
     const date = "id";

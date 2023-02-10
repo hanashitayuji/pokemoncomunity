@@ -55,6 +55,13 @@ Route::get('/multi_recruit', function() {
 Route::post('/recuruit_complete','App\Http\Controllers\TradeController@recruit');
 Route::post('/recruit_complete','App\Http\Controllers\MultiController@recruit')->name('complete');
 
+Route::get('/recuruit_complete', function() {
+    return view('recuruit_complete');
+});
+Route::get('/recruit_complete', function() {
+    return view('recuruit_complete');
+});
+
 Route::get('/trade_update/{id}','App\Http\Controllers\TradeController@update');
 Route::post('/update_complete','App\Http\Controllers\TradeController@complete')->name('trade_update');
 

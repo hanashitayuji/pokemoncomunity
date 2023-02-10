@@ -49,16 +49,22 @@
                 @foreach ($coments as $coment)
                 <ul>
                     <li class="subtitle">
-                        <a href="/user/{{ $coment->user_id }}">{{ @$coment->name }}➡︎</a>
+                        <a href="/user/{{ $coment->user_id }}">{{ @$coment->name }}</a>
                         @if($coment->coment_id!=null)
-                        {{ @$coment->coment_id }}
+                        <p>➡︎</p>
+                            @foreach ($users as $user)
+                            <a href="/user/{{ $user->coment_id }}">{{ @$user->name }}</a>
+                            @endforeach
                         @endif
-                        <input type="checkbox" name=response value="{{ $coment->id }}"><p>返信する</p>
+                        <input type="checkbox" name=response value="{{ $coment->user_id }}"><p>返信する</p>
+                        
+                    </li>
+                    <li class="multi_mains">
+                        {{ @$coment->text }}
                         @if($coment->user_id == @Auth::id())
                         <a href="/multi_coment_delete/{{ $coment->id }}">削除</a>
                         @endif
                     </li>
-                    <li class="multi_main">{{ @$coment->id }}.{{ @$coment->text }}</li>
                 </ul>
                 @endforeach
                 @if(Auth::check())
@@ -70,7 +76,7 @@
                 @endif
             </div>  
         </form>
-        <a href='{{ @$_SERVER["HTTP_REFERER"] }}'>戻る</a>
+        <a href="{{ url('/multi_list') }}">マルチ募集一覧へ</a>
     </div>
     
     @include('footer')

@@ -61,8 +61,7 @@ class MultiController extends Controller
         $id = rtrim($_SERVER["REQUEST_URI"], '/');
         $id = substr($id, strrpos($id, '/') + 1);
         $items = DB::table('multi')->leftJoin('users','multi.user_id','=','users.id')
-            ->leftJoin('coments','multi.id','=','coments.trade_id')
-            ->select('multi.*','users.id as u_id','users.name as name','coments.id as c_id','coments.user_id as c_u_id','coments.text as text','coments.trade_id as t_id','coments.coment_id as c_c_id')
+            ->select('multi.*','users.id as u_id','users.name as name')
             ->where('multi.id','=',"$id")
             ->get();
         $coments = DB::table('coments')->leftJoin('users','coments.user_id','=','users.id')
@@ -70,7 +69,13 @@ class MultiController extends Controller
             ->where('multi_id','=',"$id")
             ->where('coments.del_flg','=','0')
             ->get();
-        return view('multi',['items' => $items])->with(['coments' => $coments]);
+        $users = DB::table('coments')->leftJoin('users','coments.coment_id','=','users.id')
+            ->select('coments.*','users.name')
+            ->where('multi_id','=',"$id")
+            ->where('coments.del_flg','=','0')
+            ->get();    
+        return view('multi',['items' => $items])->with(['coments' => $coments])
+            ->with(['users' => $users]);
     }
 
     public function update() {
@@ -179,3 +184,4 @@ class MultiController extends Controller
         return view("coment_delete");
     }
 }
+

@@ -6,8 +6,8 @@
 @include('cssjs')
 </head>
 <body>
-    <div class="login">
-        <h2>変更が完了しました。</h2>
+    <div class="complete">
+        <p>変更が完了しました。</p>
         
     </div>
     <div class="new">

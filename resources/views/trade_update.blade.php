@@ -6,7 +6,7 @@
 @include('cssjs')
 </head>
 <body>
-
+@include('header')
     
     <div class="multi">
         <h2>ポケモントレード編集</h2>
@@ -32,5 +32,5 @@
         <a href="{{ url('/trade_list') }}">一覧画面へ戻る</a>
     </div>
 
-    
+    @include('footer')
 </body>

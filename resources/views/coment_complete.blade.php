@@ -8,14 +8,14 @@
 <body>
 
     @include('header')
-    <div class="login">
-        <h2>コメントを送信しました。</h2>
+    <div class="complete">
+        <p>コメントを送信しました。</p>
         
     </div>
     <div class="new">
 
     
-        <a href='{{ @$_SERVER["HTTP_REFERER"] }}'>投稿一覧に戻る</a>
+        <a href='{{ @$_SERVER["HTTP_REFERER"] }}'>投稿に戻る</a>
     </div>
 
     @include('footer')

@@ -27,7 +27,9 @@ html {
 
 body {
 	font-family: Hannotate SC;
-    background-color: silver;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    background-image: url("/img/IMG_5179.JPG");
     max-width: 1000px;
     text-align: center;
     margin: auto;
@@ -69,6 +71,7 @@ header a {
     font-size: 30px;
 }
 .log {
+    background-color: transparent;
     margin-right: 12px;
     text-align: right;
 }
@@ -92,14 +95,13 @@ footer a {
 }
 .top {
     padding: 20px;
-    margin-bottom: 20px;
     text-align: center;
-    
+    background-color: silver;
 }
 .top img {
    width: 70%; 
    margin: 20px auto;
-   padding-bottom: 20px;
+   padding-bottom: 20px ;
 }
 .top a {
     padding: 40px;
@@ -125,10 +127,11 @@ footer a {
 .multi {
     text-align: center;
     padding-bottom: 10px;
+    background-color: silver;
 }
 .multi h2 {
     font-size: 35px;
-    margin: 20px auto;
+    padding: 20px auto;
     text-align: center;
 }
 .multi li {
@@ -152,7 +155,10 @@ footer a {
 }
 
 .login {
-    width: 500px;
+    background-color: silver;
+    min-width: 700px;
+    height: 100vh;
+    min-height: 280px;
     margin: 0 auto;
 }
 .login h1 {
@@ -161,7 +167,7 @@ footer a {
 }
 .login h2 {
     font-size: 20px;
-    margin: 200px auto;
+    padding:  200px;
     text-align: center;
 }
 input {
@@ -172,6 +178,7 @@ input {
     text-align: center;
 }
 .inputbox {
+    border-top: 1px solid black;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -192,6 +199,11 @@ input {
 .inputbox ul li {
     display: flex;
 }
+.multi_mains a {
+    font-size: 20px;
+    text-align: end;
+    padding-left: 50px;
+}
 .error {
 	margin: 0;
 	color: red;
@@ -199,6 +211,7 @@ input {
 	
 }
 .new {
+    background-color: silver;
     display: flex;
     justify-content: space-around;   
 }
@@ -210,8 +223,9 @@ input {
 
 
 .member {
+    background-color: silver;
     display: flex;
-    margin: 20px auto;
+    padding: 20px auto;
 }
 .icon {
     display: flex;
@@ -230,6 +244,7 @@ input {
     margin-right: 50px;
 }
 .evaluate {
+    padding-bottom: 20px;
     display: flex;
 }
 .recuruit {
@@ -294,4 +309,16 @@ button {
 
 .nugood {
     color: #c30;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+.complete p {
+    text-align: center;
+}
+.complete {
+    padding: 300px;
+    background-color: silver;
 }

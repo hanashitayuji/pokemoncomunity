@@ -6,13 +6,13 @@
 @include('cssjs')
 </head>
 <body>
-
-    <div class="login">
-        <h2>消去が完了しました。</h2>
+@include('header')
+    <div class="complete">
+        <p>消去が完了しました。</p>
         
     </div>
     <div class="new">
         <a href='{{ @$_SERVER["HTTP_REFERER"] }}'>戻る</a>
     </div>
-
+    @include('footer')
 </body>

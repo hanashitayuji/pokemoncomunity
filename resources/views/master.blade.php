@@ -14,18 +14,21 @@
             <img src="/img/IMG_5177.png">
         </div>
         <div class="profile">
-            <p>ユーザー名:　{{ Auth::user()->name }}</p>
-            <p>一言コメント</p>
-            <p>{{ Auth::user()->body }}</p>
+            
             <div class="evaluate">
+                <p>ユーザー名:　{{ Auth::user()->name }}</p>
                 <p>いいね数: {{ @$count }}</p>
             </div>
-        </div>
+            <p>一言コメント</p>
+            <p>{{ Auth::user()->body }}</p>
+        </div>    
+        
+        
     </div>
     <div class="top">
         <div class="item">
-            <a class="menu" href="{{ url('trade_recuruit') }}">トレード募集をする</a>
             <a class="menu" href="{{ url('multi_recruit') }}">マルチ募集をする</a>
+            <a class="menu" href="{{ url('trade_recuruit') }}">トレード募集をする</a>
         </div>
         <p>ユーザー情報</p>
         <div class="recuruit">

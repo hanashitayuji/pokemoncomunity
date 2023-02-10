@@ -65,16 +65,22 @@ class TradeController extends Controller
         $id = rtrim($_SERVER["REQUEST_URI"], '/');
         $id = substr($id, strrpos($id, '/') + 1);
         $items = DB::table('exchange')->leftJoin('users','exchange.user_id','=','users.id')
-            ->leftJoin('coments','exchange.id','=','coments.trade_id')
-            ->select('exchange.*','users.id as u_id','users.name as name','coments.id as c_id','coments.user_id as c_u_id','coments.text as text','coments.trade_id as t_id','coments.coment_id as c_c_id')
+            ->select('exchange.*','users.id as u_id','users.name as name')
             ->where('exchange.id','=',"$id")
             ->get();
-            $coments = DB::table('coments')->leftJoin('users','coments.user_id','=','users.id')
+        $coments = DB::table('coments')->leftJoin('users','coments.user_id','=','users.id')
             ->select('coments.*','users.name')
             ->where('trade_id','=',"$id")
             ->where('coments.del_flg','=','0')
             ->get();
-        return view('trade',['items' => $items])->with(['coments' => $coments]);
+        $users = DB::table('coments')->leftJoin('users','coments.coment_id','=','users.id')
+            ->select('coments.*','users.name')
+            ->where('trade_id','=',"$id")
+            ->where('coments.del_flg','=','0')
+            ->get();
+        return view('trade',['items' => $items])->with(['coments' => $coments])
+            ->with(['users' => $users]);
+            
     }
 
     public function update() {

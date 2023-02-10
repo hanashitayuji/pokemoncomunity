@@ -19,7 +19,7 @@
                 <a href="/trade/{{ $item->e_id }}">{{ $item->e_title }}</a>
                 @endif    
             </li>
-            <li class="multi_main">{{ @$item->id }}.{{ @$item->text }}</li>
+            <li class="multi_main">{{ @$item->text }}</li>
         
         </ul>    
         @endforeach

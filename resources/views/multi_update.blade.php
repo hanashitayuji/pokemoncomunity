@@ -6,7 +6,7 @@
 @include('cssjs')
 </head>
 <body>
-
+@include('header')
     
     <div class="multi">
         <h2>マルチプレイ編集</h2>
@@ -30,5 +30,5 @@
         <a href="{{ url('/multi_list') }}">戻る</a>
     </div>
 
-    
+    @include('footer') 
 </body>
